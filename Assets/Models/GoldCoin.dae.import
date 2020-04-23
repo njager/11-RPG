@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/GoldCoin.dae-2d342a50a427a970de39616450709b65.scn"
+path="res://.import/GoldCoin.dae-a8e3c78cd93643afda711018a286cd43.scn"
 
 [deps]
 
-source_file="res://Models/GoldCoin.dae"
-dest_files=[ "res://.import/GoldCoin.dae-2d342a50a427a970de39616450709b65.scn" ]
+source_file="res://Assets/Models/GoldCoin.dae"
+dest_files=[ "res://.import/GoldCoin.dae-a8e3c78cd93643afda711018a286cd43.scn" ]
 
 [params]
 
@@ -24,6 +24,7 @@ meshes/ensure_tangents=true
 meshes/storage=0
 meshes/light_baking=0
 meshes/lightmap_texel_size=0.1
+skins/use_named_skins=true
 external_files/store_in_subdir=false
 animation/import=true
 animation/fps=15
