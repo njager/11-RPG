@@ -91,6 +91,8 @@ func try_attack():
 func give_gold(amount):
 	gold += amount
 	ui.update_gold_text(gold)
+	if gold == 10:
+		pass
 
 func take_damage (damageToTake):
 	curHp -= damageToTake
