@@ -30,4 +30,4 @@ func _process(delta):
 
 func _ready():
 	#hide mouse
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) 

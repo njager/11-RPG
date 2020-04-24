@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/Models/Environment/naturePack_001.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Assets/Models/Environment/naturePack_021.obj" type="ArrayMesh" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://Scenes/GoldCoin.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scripts/MainScene.gd" type="Script" id=13]
+[ext_resource path="res://Scenes/Dialog.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Pillar.tscn" type="PackedScene" id=15]
 
 [sub_resource type="ConcavePolygonShape" id=1]
 data = PoolVector3Array( 0, 0, 0, 3, 0.3, 0, 3, 0, 0, 3, 0.3, 0, 0, 0, 0, 0, 0.3, 0, 0, 0.3, -3, 3, 0.3, 0, 0, 0.3, 0, 3, 0.3, 0, 0, 0.3, -3, 3, 0.3, -3, 3, 0, -3, 3, 0.3, 0, 3, 0.3, -3, 3, 0.3, 0, 3, 0, -3, 3, 0, 0, 3, 0, -3, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, -3, 0, 0, -3, 0, 0.3, -3, 0, 0, 0, 0, 0, -3, 0, 0, 0, 0, 0.3, -3, 0, 0.3, 0, 3, 0, -3, 0, 0.3, -3, 0, 0, -3, 0, 0.3, -3, 3, 0, -3, 3, 0.3, -3 )
@@ -43,6 +45,8 @@ data = PoolVector3Array( 1.6031, 1.3175, -1.1135, 1.5503, 0, -1.1476, 1.8336, 0,
 
 [node name="MainScene" type="Spatial"]
 script = ExtResource( 13 )
+
+[node name="Dialog" parent="." instance=ExtResource( 14 )]
 
 [node name="Models" type="Node" parent="."]
 
@@ -731,5 +735,43 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.3, -15 )
 [node name="GoldCoin" parent="Coins" instance=ExtResource( 11 )]
 transform = Transform( 0.0323875, 0, -0.999475, 0, 1, 0, 0.999475, 0, 0.0323875, 5.10663, 1.57655, -8.33376 )
 
-[node name="Enemy" parent="." instance=ExtResource( 12 )]
+[node name="GoldCoin2" parent="Coins" instance=ExtResource( 11 )]
+transform = Transform( 0.0323875, 0, -0.999475, 0, 1, 0, 0.999475, 0, 0.0323875, 3.27379, 3.16044, -2.23714 )
+
+[node name="GoldCoin3" parent="Coins" instance=ExtResource( 11 )]
+transform = Transform( 0.0323875, 0, -0.999475, 0, 1, 0, 0.999475, 0, 0.0323875, 13.5193, 7.00106, 4.06531 )
+
+[node name="GoldCoin4" parent="Coins" instance=ExtResource( 11 )]
+transform = Transform( 0.0323875, 0, -0.999475, 0, 1, 0, 0.999475, 0, 0.0323875, -3.48707, 7.00106, 7.51028 )
+
+[node name="GoldCoin5" parent="Coins" instance=ExtResource( 11 )]
+transform = Transform( 0.0323875, 0, -0.999475, 0, 1, 0, 0.999475, 0, 0.0323875, -8.7594, 7.00106, -8.05275 )
+
+[node name="GoldCoin6" parent="Coins" instance=ExtResource( 11 )]
+transform = Transform( 0.0323875, 0, -0.999475, 0, 1, 0, 0.999475, 0, 0.0323875, 18.7577, 7.00106, -19.3662 )
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26801, 0.3, -7.38978 )
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.85668, 0.3, -7.38978 )
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.88853, 0.3, -5.08183 )
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.71682, 0.3, -0.309038 )
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.11141, 0.3, -0.309038 )
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.141702, 0.3, -26.5599 )
+
+[node name="Enemy7" parent="Enemies" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5868, 0.3, -26.5599 )
+
+[node name="Pillar" parent="." instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.1091, 6.84667, -19.6234 )

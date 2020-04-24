@@ -21,6 +21,7 @@ var vel = Vector3()
 onready var camera = get_node("CameraOrbit")
 onready var attackCast = get_node("AttackRayCast")
 onready var ui = get_node("CanvasLayer/UI")
+onready var dialog = get_node("res//Scenes/MainScene.tscn/Dialog/WindowDialog")
 
 func _ready():
 	ui.update_health_bar(curHp, maxHp)
@@ -91,14 +92,17 @@ func try_attack():
 func give_gold(amount):
 	gold += amount
 	ui.update_gold_text(gold)
-	if gold == 10:
-		pass
+	if gold == 6:
+		get_tree().change_scene("res://Scenes/EndScreen.tscn")
 
 func take_damage (damageToTake):
 	curHp -= damageToTake
 	ui.update_health_bar(curHp, maxHp)
 	if curHp <= 0:
 		die()
+
+func dialogue():
+	dialog.popup()
 
 func die():
 	get_tree().reload_current_scene()
